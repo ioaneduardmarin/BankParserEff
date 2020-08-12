@@ -1,0 +1,100 @@
+
+
+
+Numarul de referinta este urmatorul: 045RONCRT0000000001
+Contul Iban al clientului este urmatorul: RO80BTRL04501203000000XX
+Numarul de extras este: 00196. Numarul de secventa este: 00001.
+In contul de credit, la initierea tranzactiei din data de 12/11/2013 12:00:00 AM, se afla 362,85 RON 
+Tranzactia efectuata in data de 12/11/2011 12:00:00 AM de tip transfer credit in valoare de 1,50 unitati monetare a fost realizata de clientul posesor al referintei 848EIOP133450051.
+Detaliile tranzactiei sunt urmatoarele .
+Detaliile tranzactiei sunt urmatoarele: TRANSFER ANDREEA SRL 848RONCRT0000000001 232 BTRLRO22
+Tranzactia efectuata in data de 12/11/2011 12:00:00 AM de tip transfer debit in valoare de 59,00 unitati monetare a fost realizata de clientul posesor al referintei 045EPOH133450259.
+Detaliile tranzactiei sunt urmatoarele .
+Detaliile tranzactiei sunt urmatoarele: COD CL 1234 NR FACT 1234 CV F PLATA FURNIZOR RCS RDS 122 28310
+
+Detaliile tranzactiei sunt urmatoarele: ALEXANDRU SRL 181234567
+Tranzactia efectuata in data de 12/11/2011 12:00:00 AM de tip transfer credit in valoare de 9,00 unitati monetare a fost realizata de clientul posesor al referintei 848EIOP133450101.
+Detaliile tranzactiei sunt urmatoarele .
+Detaliile tranzactiei sunt urmatoarele: ANDREEA SRL 848RONCRT0000000001 233 BTRLRO22
+Tranzactia efectuata in data de 12/11/2011 12:00:00 AM de tip transfer debit in valoare de 440,46 unitati monetare a fost realizata de clientul posesor al referintei 045EUPP133450006.
+Detaliile tranzactiei sunt urmatoarele .
+Detaliile tranzactiei sunt urmatoarele: GDF SUEZ 123 191000003347GDF123456789 BTRLRO22
+
+Detaliile tranzactiei sunt urmatoarele: POS 11/12/2013 TID 47377000 DREAM TEAM CATERING RESITA BL. 46, SC
+In contul de credit, la finalizarea tranzactiei din data de 12/11/2013 12:00:00 AM, se afla 55,11 RON 
+In contul de credit, in data de 12/11/2013 12:00:00 AM, soldul final este urmatorul: 55,11  RON 
+
+
+
+Numarul de referinta este urmatorul: 045RONCRT0000000001
+Contul Iban al clientului este urmatorul: RO80BTRL04501203000000XX
+Numarul de extras este: 00196. Numarul de secventa este: 00001.
+In contul de credit, la initierea tranzactiei din data de 12/11/2013 12:00:00 AM, se afla 362,85 RON 
+Tranzactia efectuata in data de 12/11/2011 12:00:00 AM de tip transfer credit in valoare de 1,50 unitati monetare a fost realizata de clientul posesor al referintei 848EIOP133450051.
+Detaliile tranzactiei sunt urmatoarele .
+Detaliile tranzactiei sunt urmatoarele: TRANSFER ANDREEA SRL 848RONCRT0000000001 232 BTRLRO22
+Tranzactia efectuata in data de 12/11/2011 12:00:00 AM de tip transfer debit in valoare de 59,00 unitati monetare a fost realizata de clientul posesor al referintei 045EPOH133450259.
+Detaliile tranzactiei sunt urmatoarele .
+Detaliile tranzactiei sunt urmatoarele: COD CL 1234 NR FACT 1234 CV F PLATA FURNIZOR RCS RDS 122 28310
+
+Detaliile tranzactiei sunt urmatoarele: ALEXANDRU SRL 181234567
+Tranzactia efectuata in data de 12/11/2011 12:00:00 AM de tip transfer credit in valoare de 9,00 unitati monetare a fost realizata de clientul posesor al referintei 848EIOP133450101.
+Detaliile tranzactiei sunt urmatoarele .
+Detaliile tranzactiei sunt urmatoarele: ANDREEA SRL 848RONCRT0000000001 233 BTRLRO22
+Tranzactia efectuata in data de 12/11/2011 12:00:00 AM de tip transfer debit in valoare de 440,46 unitati monetare a fost realizata de clientul posesor al referintei 045EUPP133450006.
+Detaliile tranzactiei sunt urmatoarele .
+Detaliile tranzactiei sunt urmatoarele: GDF SUEZ 123 191000003347GDF123456789 BTRLRO22
+
+Detaliile tranzactiei sunt urmatoarele: POS 11/12/2013 TID 47377000 DREAM TEAM CATERING RESITA BL. 46, SC
+In contul de credit, la finalizarea tranzactiei din data de 12/11/2013 12:00:00 AM, se afla 55,11 RON 
+In contul de credit, in data de 12/11/2013 12:00:00 AM, soldul final este urmatorul: 55,11 RON 
+
+
+
+Numarul de referinta este urmatorul: 045RONCRT0000000001
+Contul Iban al clientului este urmatorul: RO80BTRL04501203000000XX
+Numarul de extras este: 00196. Numarul de secventa este: 00001.
+In contul de credit, la initierea tranzactiei din data de 12/11/2013 12:00:00 AM, se afla 362,85 RON 
+Tranzactia efectuata in data de 12/11/2011 12:00:00 AM de tip transfer credit in valoare de 1,50 unitati monetare a fost realizata de clientul posesor al referintei 848EIOP133450051.
+Detaliile tranzactiei sunt urmatoarele .
+Detaliile tranzactiei sunt urmatoarele: TRANSFER ANDREEA SRL 848RONCRT0000000001 232 BTRLRO22
+Tranzactia efectuata in data de 12/11/2011 12:00:00 AM de tip transfer debit in valoare de 59,00 unitati monetare a fost realizata de clientul posesor al referintei 045EPOH133450259.
+Detaliile tranzactiei sunt urmatoarele .
+Detaliile tranzactiei sunt urmatoarele: COD CL 1234 NR FACT 1234 CV F PLATA FURNIZOR RCS RDS 122 28310
+
+Detaliile tranzactiei sunt urmatoarele: ALEXANDRU SRL 181234567
+Tranzactia efectuata in data de 12/11/2011 12:00:00 AM de tip transfer credit in valoare de 9,00 unitati monetare a fost realizata de clientul posesor al referintei 848EIOP133450101.
+Detaliile tranzactiei sunt urmatoarele .
+Detaliile tranzactiei sunt urmatoarele: ANDREEA SRL 848RONCRT0000000001 233 BTRLRO22
+Tranzactia efectuata in data de 12/11/2011 12:00:00 AM de tip transfer debit in valoare de 440,46 unitati monetare a fost realizata de clientul posesor al referintei 045EUPP133450006.
+Detaliile tranzactiei sunt urmatoarele .
+Detaliile tranzactiei sunt urmatoarele: GDF SUEZ 123 191000003347GDF123456789 BTRLRO22
+
+Detaliile tranzactiei sunt urmatoarele: POS 11/12/2013 TID 47377000 DREAM TEAM CATERING RESITA BL. 46, SC
+In contul de credit, la finalizarea tranzactiei din data de 12/11/2013 12:00:00 AM, se afla 55,11 RON 
+In contul de credit, in data de 12/11/2013 12:00:00 AM, soldul final este urmatorul: 55,11 RON 
+
+
+
+Numarul de referinta este urmatorul: 045RONCRT0000000001
+Contul Iban al clientului este urmatorul: RO80BTRL04501203000000XX
+Numarul de extras este: 00196. Numarul de secventa este: 00001.
+In contul de credit, la initierea tranzactiei din data de 12/11/2013 12:00:00 AM, se afla 362,85 RON 
+Tranzactia efectuata in data de 12/11/2011 12:00:00 AM de tip transfer credit in valoare de 1,50 unitati monetare a fost realizata de clientul posesor al referintei 848EIOP133450051.
+Detaliile tranzactiei sunt urmatoarele .
+Detaliile tranzactiei sunt urmatoarele: TRANSFER ANDREEA SRL 848RONCRT0000000001 232 BTRLRO22
+Tranzactia efectuata in data de 12/11/2011 12:00:00 AM de tip transfer debit in valoare de 59,00 unitati monetare a fost realizata de clientul posesor al referintei 045EPOH133450259.
+Detaliile tranzactiei sunt urmatoarele .
+Detaliile tranzactiei sunt urmatoarele: COD CL 1234 NR FACT 1234 CV F PLATA FURNIZOR RCS RDS 122 28310
+
+Detaliile tranzactiei sunt urmatoarele: ALEXANDRU SRL 181234567
+Tranzactia efectuata in data de 12/11/2011 12:00:00 AM de tip transfer credit in valoare de 9,00 unitati monetare a fost realizata de clientul posesor al referintei 848EIOP133450101.
+Detaliile tranzactiei sunt urmatoarele .
+Detaliile tranzactiei sunt urmatoarele: ANDREEA SRL 848RONCRT0000000001 233 BTRLRO22
+Tranzactia efectuata in data de 12/11/2011 12:00:00 AM de tip transfer debit in valoare de 440,46 unitati monetare a fost realizata de clientul posesor al referintei 045EUPP133450006.
+Detaliile tranzactiei sunt urmatoarele .
+Detaliile tranzactiei sunt urmatoarele: GDF SUEZ 123 191000003347GDF123456789 BTRLRO22
+
+Detaliile tranzactiei sunt urmatoarele: POS 11/12/2013 TID 47377000 DREAM TEAM CATERING RESITA BL. 46, SC
+In contul de credit, la finalizarea tranzactiei din data de 12/11/2013 12:00:00 AM, se afla 55,11 RON 
+In contul de credit, in data de 12/11/2013 12:00:00 AM, soldul final este urmatorul: 55,11 RON 
