@@ -6,6 +6,8 @@ namespace BankParserEff
 {
     public class Extras
     {
+        // These should be fields, not properties
+        // See: https://stackoverflow.com/a/295109
         public string _numarReferinta;
         public string _iban;
         public string _nrExtras;
@@ -38,7 +40,7 @@ namespace BankParserEff
         public string _informatiiPentruClientSoldDisponibil;
 
 
-        
+        // What is all this whitespace here for?
 
 
 
