@@ -6,7 +6,7 @@ namespace BankParserEff
 {
     public class Extras
     {
-        // These should be fields, not properties
+        // These should be properties, not fields
         // See: https://stackoverflow.com/a/295109
         public string _numarReferinta;
         public string _iban;
