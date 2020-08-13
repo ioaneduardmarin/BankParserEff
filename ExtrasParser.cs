@@ -5,15 +5,25 @@ namespace BankParserEff
 {
     public class ExtrasParser
     {
+        // It's default, but you should still mention that the field is "private"
         Extras _extras;
+        
+        // This one should either BE a property or be wrapped by one. Preferrably the first, in this case.
         public int _lastProcessedLineIndex;
 
+        // First off, *stop it* with the arbitrary empty lines
+        // You shouldn't need more than one line of empty space at once, and you should
+        // always have an empty line between methods for example
 
+        // All these  methods, why are they public? If you don't expect to use them from outside the class, make all of them private
+        // Only keep public what you expect to be used by consumers of the class, this OOP basics.
+        
+        // Is this method even used anymore?        
         public Extras Tag20(string sir)
-        {
+        {// Why an empty line below?
 
             sir = sir.Replace("\n", "").Replace("\r", "");
-            sir = $"\n\n\n" + sir;
+            sir = $"\n\n\n" + sir;// Why the $ (verbatim) prefix? You're still doing concatenation unsing '+' ; also, why are you adding three newlines?
             _extras._numarReferinta = sir;
             return _extras;
         }
@@ -21,6 +31,12 @@ namespace BankParserEff
         {
 
             string iban = sir;
+            // Look up newline variations; MT940 seems to always have its lines ended in CR+LF (so \r\n), never just \r or just \n so you can just
+            // replace \r\n in one go. 
+            // 
+            // Also, do the lines you're processing even still have line feeds at the end, after using ReadAllLines?
+            // Because the "remarks" section of the documentation says they don't and it's lazy to not check the docs or with a debugger:
+            // https://docs.microsoft.com/en-us/dotnet/api/system.io.file.readalllines?view=netcore-3.1
             _extras._iban = iban.Replace("\n", "").Replace("\r", "");
             return _extras;
         }
@@ -39,7 +55,7 @@ namespace BankParserEff
         {
 
             if (sir.Contains(":86:"))
-            {
+            { // Does this branch of the "if" EVER get used? Isn't it from when you were still not parsing line-by-line? Same goes for others like it
 
                 _extras._codSoldInitial = sir.Substring(0, 1);
                 _extras._dataSoldInitial = (DateTime.ParseExact("20" + sir.Substring(1, 6), "yyyyMMdd", null));
@@ -62,8 +78,21 @@ namespace BankParserEff
         {
             Tranzactie tranzactie = new Tranzactie();
 
+            // I don't like the code in the "if/else"
+            //
+            // Any code that is COMMON should sit outside the "if/else" and be written ONLY ONCE, you're just cloning code here
+            // and making it extremely hard for anyone to follow what's going on ; most of the if and the else parts share the
+            // same exact code
+            //
+            // This applies for ALL these if/else blocks.
+            //
+            // By the way, you might know now, but I sure as hell don't, how the :61: tag looks, so why not write an explanation
+            // in a code comment about its structure? You end up _needing_ two displays otherwise.
             if (sir.IndexOf(":86:") - sir.IndexOf("/") <= 52)
             {
+                // I'm not sure this code, which is probably rolled over by from when you had just one long string, behaves as it should
+                // Especially since you probably haven't checked how it handles :61: tags that are on two lines
+                //
                 tranzactie._dataTranzactie = (DateTime.ParseExact("20" + sir.Substring(0, 6), "yyyyMMdd", null)).Date;
                 tranzactie._codTranzactie = sir.Substring(10, 1);
                 tranzactie._sumaTranzactie = Convert.ToDecimal(sir[11..sir.IndexOf(',')] + sir.Substring(sir.IndexOf(','), 3)) / 100;
@@ -72,7 +101,7 @@ namespace BankParserEff
                 tranzactie._detaliiTranzactie = "";
                 tranzactie._informatiiPentruClient = sir.Substring(sir.IndexOf(":86:") + 4);
             }
-
+            // Should this not be just an "else"?
             if (sir.IndexOf(":86:") - sir.IndexOf("/") > 52)
             {
                 tranzactie._dataTranzactie = (DateTime.ParseExact("20" + sir.Substring(0, 6), "yyyyMMdd", null)).Date;
@@ -161,7 +190,8 @@ namespace BankParserEff
         }
 
 
-
+//...
+// Why the random whitespace though?
 
 
 
@@ -169,9 +199,13 @@ namespace BankParserEff
         {
 
             _extras = new Extras();
-            string randNetichetat = "";
+            string randNetichetat = ""; // *Ne_e_tichetat
             bool isExtrasValid = false;
 
+            // You don't really need linieActuala; you could write "for (;indexLiniePrimita < ....; indexLiniePrimita += 1)"
+            // as you're only interesting in moving "indexLiniePrimita" forward
+            //
+            // Though it is usually a _bad idea_ to modify a received parameter, you should probably copy it to a local variable
             for (int linieActuala = indexLiniePrimita; linieActuala < liniiIntrare.Length; linieActuala += 1)
             {
                 if (String.IsNullOrEmpty(liniiIntrare[linieActuala]))
@@ -180,7 +214,7 @@ namespace BankParserEff
                     _lastProcessedLineIndex = indexLiniePrimita;
 
                 }
-                else { break; }
+                else { break; } // Why not invert the "if" check? Then you don't even need the "else" as the code after "break" won't be executed
 
             }
             for (int linieCurenta = indexLiniePrimita; linieCurenta < liniiIntrare.Length; linieCurenta += 1)
@@ -210,12 +244,24 @@ namespace BankParserEff
                 if (liniiIntrare[linieCurenta].StartsWith(":60F:"))
                 {
                     randNetichetat = ConcatenareRanduriDetalii(liniiIntrare, linieCurenta);
+                    // This is a very bad idea as *you're modifying the source array* when you set
+                    // this changed value on it. And you probably didn't even register this issue.
+                    //
+                    // WHY NOT JUST USE A LOCAL VARIABLE to store your intermediate data?!
+                    // For some unknwon reason you avoid them and it makes no sense.
+                    //
+                    // Also applies to the rest of the places like this one
                     liniiIntrare[linieCurenta] = liniiIntrare[linieCurenta] + randNetichetat;
                     Tag60(liniiIntrare[linieCurenta].Substring(5));
                 }
 
                 if (liniiIntrare[linieCurenta].StartsWith(":61:"))
                 {
+                    // Be aware that the :61: tag is the only tag other than :86: that can
+                    // have two lines, with the second line being "supplementary details"
+                    // I'm not sure you're processing this correctly here
+                    // And I think you've not checked that since you haven't created for yourself
+                    // input data that contains that sort of :61: tag
                     randNetichetat = ConcatenareRanduriDetalii(liniiIntrare, linieCurenta);
                     liniiIntrare[linieCurenta] = liniiIntrare[linieCurenta] + randNetichetat;
                     _extras._tranzactii.Add(Tag61(liniiIntrare[linieCurenta].Substring(4)));
@@ -223,6 +269,25 @@ namespace BankParserEff
 
                 if (liniiIntrare[linieCurenta].StartsWith(":62F:"))
                 {
+                    //
+                    // .
+                    // .
+                    // .
+                    // Okay, after scratching my head, I figured out what you're doing here, you're concatenating
+                    // several lines into one long line, and then using the code you previously had to parse the 
+                    // entire line in one go. This is fine, it's one solution you could handle implementing.
+                    //
+                    // But it _is_ wasteful as you still end up going over any :86: fields you encounter, you should
+                    // have tried to skip ahead as well.
+                    //
+                    // And if you don't know how to return multiple values from a method, well then
+                    //
+                    // a) https://lmgtfy.com/?q=how+to+return+multiple+values+c%23 (not that hard was it?)
+                    //
+                    // or
+                    //
+                    // b) ASK!
+                    //
                     randNetichetat = ConcatenareRanduriDetalii(liniiIntrare, linieCurenta);
                     liniiIntrare[linieCurenta] = liniiIntrare[linieCurenta] + randNetichetat;
                     Tag62(liniiIntrare[linieCurenta].Substring(5));
@@ -244,6 +309,8 @@ namespace BankParserEff
 
 
                 if (liniiIntrare[linieCurenta].StartsWith("-}") || liniiIntrare[linieCurenta].Equals(""))
+                    // "-}" should be saved as a constant field on the class level, as you should always avoid "magic strings"
+                    // Also, we don't compare a string to "", we use string.IsNullOrWhitespace(myStr) instead
                 {
                     _lastProcessedLineIndex = linieCurenta + 1;
                     break;
@@ -290,7 +357,7 @@ namespace BankParserEff
 
         public string ConcatenareRanduriDetalii(string[] liniiIntrare, int linieCurenta)
         {
-            string randNetichetat = "";
+            string randNetichetat = ""; // Ne_e_tichetat
             for (int linieFaraTagSauCuTag86 = linieCurenta + 1; linieFaraTagSauCuTag86 < liniiIntrare.Length; linieFaraTagSauCuTag86 += 1)
             {
                 if (!liniiIntrare[linieFaraTagSauCuTag86].StartsWith(":6") && !liniiIntrare[linieFaraTagSauCuTag86].StartsWith("-}") && !String.IsNullOrWhiteSpace(liniiIntrare[linieFaraTagSauCuTag86]))
